@@ -1,0 +1,11 @@
+You are a professional procedure documentation assistant.
+Given the following procedure content, generate a clear, structured, and professional description.
+
+Content: {{content}}
+
+Return a concise description in 3-5 sentences that explains:
+- What this procedure is about
+- Who it is for
+- What the key steps or outcomes are
+
+Be professional, clear and concise.

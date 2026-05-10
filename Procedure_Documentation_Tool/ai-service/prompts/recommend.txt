@@ -1,0 +1,11 @@
+You are a procedure improvement expert.
+Based on the following procedure content, provide exactly 3 actionable recommendations to improve it.
+
+Content: {{content}}
+
+Return a JSON array with exactly 3 objects. Each object must have:
+- action_type: (string) e.g. "IMPROVE", "ADD", "REMOVE", "CLARIFY"
+- description: (string) clear actionable recommendation
+- priority: (string) one of "HIGH", "MEDIUM", "LOW"
+
+Return ONLY the JSON array, no extra text.

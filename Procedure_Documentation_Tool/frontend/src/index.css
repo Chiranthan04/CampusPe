@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #F0F4FF 0%, #F8FAFF 50%, #EEF2FF 100%);
+    min-height: 100vh;
+    color: #1e293b;
+  }
+
+  ::-webkit-scrollbar       { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #f1f5f9; }
+  ::-webkit-scrollbar-thumb { background: #4F46E5; border-radius: 10px; }
+  ::-webkit-scrollbar-thumb:hover { background: #3730A3; }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #4F46E5, #06B6D4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-card border border-gray-100/80 transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply shadow-card-hover -translate-y-0.5;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white font-semibold px-5 py-2.5 rounded-xl
+           hover:bg-primary-dark transition-all duration-200
+           shadow-sm hover:shadow-md active:scale-95
+           disabled:opacity-60 disabled:cursor-not-allowed
+           flex items-center justify-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-gray-700 font-medium px-5 py-2.5 rounded-xl
+           border border-gray-200 hover:bg-gray-50 hover:border-gray-300
+           transition-all duration-200 shadow-sm
+           flex items-center justify-center gap-2;
+  }
+
+  .btn-danger {
+    @apply bg-red-500 text-white font-semibold px-5 py-2.5 rounded-xl
+           hover:bg-red-600 transition-all duration-200
+           shadow-sm hover:shadow-md active:scale-95
+           flex items-center justify-center gap-2;
+  }
+
+  .input-field {
+    @apply w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm
+           bg-gray-50 focus:bg-white
+           focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary
+           transition-all duration-200 placeholder-gray-400;
+  }
+
+  .input-error {
+    @apply border-red-400 bg-red-50 focus:ring-red-200 focus:border-red-400;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  .section-title {
+    @apply text-lg font-bold text-gray-800 flex items-center gap-2;
+  }
+
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 animate-fade-in;
+  }
+}
